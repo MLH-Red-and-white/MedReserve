@@ -8,6 +8,8 @@ export const addApplicant = (applicant) => {
       .collection("applicants")
       .add({
         ...applicant,
+        age: parseInt(applicant.age),
+        covid19_positive: Boolean(applicant.covid19_positive),
         createdAt: new Date(),
       })
       .then(() => {
@@ -19,19 +21,19 @@ export const addApplicant = (applicant) => {
   };
 };
 
-export const getHospitals = () => {
-  return (dispatch, getState, { getFirestore }) => {
-    // const firestore = getFirestore();
-    // firebase
-    //   .database()
-    //   .ref("hospitals")
-    //   .on("value", (snapshot) => {
-    //     snapshot.forEach((snap) => {
-    //       console.log(snap.val());
-    //     });
-    //   });
-    dispatch({
-      type: types.GET_HOSPITALS,
-    });
-  };
-};
+// export const getHospitals = () => {
+//   return (dispatch, getState, { getFirestore }) => {
+//     const firestore = getFirestore();
+//     firebase
+//       .database()
+//       .ref("hospitals")
+//       .on("value", (snapshot) => {
+//         snapshot.forEach((snap) => {
+//           console.log(snap.val());
+//         });
+//       });
+//     dispatch({
+//       type: types.GET_HOSPITALS,
+//     });
+//   };
+// };

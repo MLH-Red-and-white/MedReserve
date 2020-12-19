@@ -11,7 +11,8 @@ const initialState = {
   hospitals_applied_to: [],
   name: "",
   phone_number: "",
-  symptoms: "",
+  symptoms: [],
+  hospitals: [],
 };
 
 const reducer = (state = initialState, action) => {
@@ -30,18 +31,6 @@ const reducer = (state = initialState, action) => {
 
     case types.GET_HOSPITALS:
       console.log("getHospital");
-
-      // console.log(firebase);
-      // firebase
-      //   .database()
-      //   .ref("hospitals")
-      //   .on("value", (snapshot) => {
-      //     snapshot.forEach((snap) => {
-      //       console.log(snap.val());
-      //     });
-      //   });
-      // console.log(action.payload);
-      // return { ...state, hospitals: action.payload };
       return state;
 
     default:
