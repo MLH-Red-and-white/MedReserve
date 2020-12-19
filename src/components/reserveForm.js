@@ -99,6 +99,7 @@ class reserveForm extends Component {
       symptoms: [],
     });
     this.resetCheckboxes();
+    window.location.href = "/success";
   };
 
   resetCheckboxes = () => {
