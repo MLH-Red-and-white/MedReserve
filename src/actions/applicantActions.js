@@ -9,8 +9,8 @@ export const addApplicant = (applicant) => {
       .add({
         ...applicant,
         age: parseInt(applicant.age),
-        covid19_positive: Boolean(applicant.covid19_positive),
         createdAt: new Date(),
+        covid19_positive: applicant.covid19_positive.toLowerCase() == "true",
       })
       .then(() => {
         dispatch({ type: types.ADD_APPLICANT });
