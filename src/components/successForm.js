@@ -7,6 +7,10 @@ import {
   Row,
   Label,
   Container,
+  Card,
+  CardBody,
+  CardHeader,
+  CardFooter,
 } from "reactstrap";
 
 import React, { Component } from "react";
@@ -14,20 +18,34 @@ import React, { Component } from "react";
 export class successForm extends Component {
   render() {
     return (
-      <React.Fragment>
-        <div></div>
-        <div
-          className="bg-light rounded w-50 border m-auto pt-4 pb-4
-        text-center"
+      <div
+        className="center-block"
+        style={{
+          padding: "75px",
+          height: "750px",
+        }}
+      >
+        <Card
+          className="rounded border m-auto
+      text-center w-50"
         >
-          <h2 className="mb-3">
-            Your application has been successfully recorded.
-          </h2>
-          <a color="primary" href="/">
-            Submit another application
-          </a>
-        </div>
-      </React.Fragment>
+          <CardHeader style={{ backgroundColor: "#5DBB63" }}>
+            <h2 className="mb-3" style={{ color: "#f5f5f5" }}>
+              Your application has been successfully recorded.
+            </h2>
+          </CardHeader>
+          <CardBody
+            className="text-primary"
+            style={{ backgroundColor: "white" }}
+          >
+            <u>
+              <a className="secondary" href="/">
+                Submit another application
+              </a>
+            </u>
+          </CardBody>
+        </Card>
+      </div>
     );
   }
 }

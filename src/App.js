@@ -10,7 +10,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className="App">
+        <div className="App bg-light">
           <Container>
             <Switch>
               <Route exact path="/" component={form} />
