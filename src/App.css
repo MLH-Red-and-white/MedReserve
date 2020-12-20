@@ -1,5 +1,9 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+}
+
+.select-at-least-one {
+  font-size: 0.5em;
 }
 
 .App-logo {
